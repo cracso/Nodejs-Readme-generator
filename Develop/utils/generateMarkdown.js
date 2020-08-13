@@ -1,19 +1,22 @@
 // function to generate markdown for README
-function generateMarkdown(data) {
+function generateMarkdown(data, gitInfo) {
   return `
   # **${data.title}**
 
   ${data.description}
+  
+  <img src = "https://img.shields.io/static/v1?label=license&message=${data.license}&color=blue">
+
 
   ## Table of contents
-  
-* [Description](#Description)
-* [Installation](#Installation)
-* [Usage](#Usage)
-* [License](#License)
-* [Contributors](#Contributors)
-* [Test](#Test)
-* [Questions](#Questions)
+
+  [Description](#Description)
+  [Installation](#Installation)
+  [Usage](#Usage)
+  [License](#License)
+  [Contributors](#Contributors)
+  [Test](#Test)
+  [Questions](#Questions)
 
   ## Installation
   ${data.installation}
@@ -24,15 +27,19 @@ function generateMarkdown(data) {
   ## License
   ${data.license}
 
-  ## Contributors
-  ${data.contributing}
+  ## Contributing
+      
+  ${gitInfo.name}
+  
+  Link to GitHub: ${gitInfo.profile}
 
   ## Test
   ${data.test}
 
-  ## Questions
-  ${data.questions}  
-
+  ## Email
+  
+  Email address: ${data.questions}
+  
 `;
 }
 
