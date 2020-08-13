@@ -3,8 +3,13 @@ function generateMarkdown(data, gitInfo) {
   return `
   # **${data.title}**
 
+
   ${data.description}
   
+  ##license
+  
+  ${data.license}
+
   <img src = "https://img.shields.io/static/v1?label=license&message=${data.license}&color=blue">
 
 
@@ -31,12 +36,13 @@ function generateMarkdown(data, gitInfo) {
       
   ${gitInfo.name}
   
+  
   Link to GitHub: ${gitInfo.profile}
 
   ## Test
   ${data.test}
 
-  ## Email
+  ## Questions
   
   Email address: ${data.questions}
   

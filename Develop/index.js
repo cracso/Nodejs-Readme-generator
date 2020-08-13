@@ -32,7 +32,7 @@ const questions = [
         name: "usage",
         message: "Provide the project usage"
     },
-    {
+       {
         type: "checkbox",
         name: "license",
         message: "Which license do you use",
@@ -42,7 +42,8 @@ const questions = [
             "Apache"
         ]
     },
-    {
+
+       {
         type: "input",
         name: "test",
         message: "Provide the project tests"
